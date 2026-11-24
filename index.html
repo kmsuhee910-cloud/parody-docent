@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self'; connect-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>미술의 이해 · 오디오 가이드</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="content.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="현재 위치">미술의 이해 <span aria-hidden="true">&gt;</span> 오디오 가이드</nav>
+    <main>
+      <section class="exhibition" aria-labelledby="exhibition-title">
+        <h1 id="exhibition-title"></h1>
+        <div class="exhibition-action"><button class="pill" disabled>전시 바로가기</button></div>
+        <figure class="artwork" id="artwork"><img id="hero" alt=""><span id="image-placeholder">작품 이미지 준비 중</span></figure>
+        <div class="listening">
+          <h2 id="track-title"></h2>
+          <div class="player" role="group" aria-label="오디오 플레이어">
+            <button id="play" class="icon-button" aria-label="재생" disabled>▶</button>
+            <output id="time" aria-label="현재 시간과 전체 길이">0:00 / —</output>
+            <input id="seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="재생 위치" disabled>
+            <div class="volume-group"><button id="mute" class="icon-button" aria-label="음소거" aria-pressed="false" disabled>♪</button><input id="volume" type="range" min="0" max="1" step="0.05" value="1" aria-label="음량" disabled></div>
+          </div>
+          <p id="audio-status" class="status" role="status">오디오 준비 중</p>
+        </div>
+      </section>
+      <section class="track-section" aria-label="오디오 트랙 목록"><ol id="tracks"></ol></section>
+    </main>
+    <footer><span>오디오 가이드</span></footer>
+  </div>
+</body>
+</html>
